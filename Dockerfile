@@ -28,6 +28,7 @@ RUN npm install -g \
     angular-cli
 
 WORKDIR /home/user/src
+VOLUME /home/user/src
 
 # Copy entrypoint script (should be an executable) into the container
 COPY ./entrypoint.sh /entrypoint.sh

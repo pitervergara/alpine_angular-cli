@@ -19,21 +19,11 @@ nmp_install_if_package_json() {
     fi
 }
 
-bower_install_if_bower_json() {
-    if [ -f 'bower.json' ]; then
-	echo "Running bower install..."
-        bower install
-    else 
-        echo "No 'bower.json' inside $(pwd). Skipping 'bower install'."
-    fi
-}
-
 if [ "${cmd}" == "default" ]; then
 
     echo "Running the default container startup command ..."
     new_project_if_folder_empty || exit
     nmp_install_if_package_json || exit
-    bower_install_if_bower_json || exit
 
     ng serve --host=0.0.0.0
 else
