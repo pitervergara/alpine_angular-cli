@@ -17,7 +17,7 @@ There is an entrypoint script (_/entrypoint.sh_) which runs `npm install` every 
 * Simply run the container mounting your files inside the it (at **/home/user/src**):
 ```bash
 me@host$ cd /my/project/folder
-me@host$ docker run --rm -it -v "$PWD:/home/user/src" -p  4200:4200 -p 49153:49153 pitervergara/angular2_ng-cli
+me@host$ docker run --rm -it -v "$PWD:/home/user/src" -p  4200:4200 -p 49153:49153 pitervergara/alpine_angular-cli
 ```
 * Access [http://localhost:4200/](http://localhost:4200/)
 
@@ -28,7 +28,7 @@ If you do not have an angular-cli project yet __and the folder you mount into th
 
 ```bash
 me@host$ cd /empty/folder
-me@host$ docker run --rm -it -v "$PWD:/home/user/src" -p  4200:4200 -p 49153:49153 pitervergara/angular2_ng-cli
+me@host$ docker run --rm -it -v "$PWD:/home/user/src" -p  4200:4200 -p 49153:49153 pitervergara/alpine_angular-cli
 ```
 * Access [http://localhost:4200/](http://localhost:4200/)
 
@@ -36,7 +36,7 @@ If you want more control over project initialization, run a shell inside the con
 
 ```bash
 me@host$ cd /empty/folder
-me@host$ docker run --rm -it -v "$PWD:/home/user/src" pitervergara/angular2_ng-cli /bin/sh
+me@host$ docker run --rm -it -v "$PWD:/home/user/src" pitervergara/alpine_angular-cli /bin/sh
 
 user@container $ ng
 Usage: ng <command (Default: help)>
