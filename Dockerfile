@@ -42,5 +42,5 @@ USER user
 
 EXPOSE 4200 49153
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["ng", "serve"]
+CMD ["default"]  # default is defined in entrypoint.sh
 
